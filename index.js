@@ -1,7 +1,7 @@
 import express from "express";
 import axios from "axios";
 import expressEjsLayouts from "express-ejs-layouts";
-import path from "path";
+import "dotenv/config"
 
 const port = process.env.PORT || 3000;
 const API_KEY = process.env.API_KEY;
