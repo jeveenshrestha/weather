@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>    
+    <form action="/city" method="post">
+      <div class="row">
+        <div class="col-11">
+          <input
+            class="form-control mb-3"
+            type="text"
+            name="city"
+            value=""
+            placeholder="Name of a city"
+          />
+        </div>
+        <div class="col-1">
+          <button class="btn btn-primary" type="submit" value="Search">
+            Search
+          </button>
+        </div>
+      </div>
+    </form>
+    <div class="d-flex justify-content-center">
+      <div class="card text-bg-light text-center w-50" style="max-width: 20rem">
+        <div class="card-body">
+          <h5 class="card-title">
+            <%=weatherData.name %>, <%=weatherData.sys.country %>
+          </h5>
+          <h3>
+            <img
+              src="<%=`https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`%>"
+            /><%=weatherData.main.temp%>
+          </h3>
+          <span
+            >H:<%=weatherData.main.temp_max %> L: <%=weatherData.main.temp_min
+            %></span
+          >
+        </div>
+        <div class="footer px-2 text-start">
+          <small>
+            Feels Like <%=weatherData.main.feels_like %>.
+            <%=weatherData.weather[0].description%>
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-6"><%=weatherData.wind.speed %>m/s </div>
+          <div class="col-6"><%=weatherData.main.pressure %>hPa</div>     
+        </div>
+        <div class="row">
+          <div class="col-6"><%=weatherData.main.humidity %>%</div>
+          <div class="col-6"><%=weatherData.visibility/1000 %>km</div>
+        </div>
+          
+      </div>
+    </div>
+    <script>
+    </script>
+  </body>
+</html>

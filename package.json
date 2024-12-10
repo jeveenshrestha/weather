@@ -1,0 +1,20 @@
+{
+  "name": "weather-application",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jeveen Shrestha",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.8",
+    "bootstrap-icons": "^1.11.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-ejs-layouts": "^2.5.1"
+  }
+}
