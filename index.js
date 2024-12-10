@@ -1,9 +1,10 @@
 import express from "express";
 import axios from "axios";
 import expressEjsLayouts from "express-ejs-layouts";
+import path from "path";
 
-const port = 3000;
-const API_KEY = "e4a771c10d7625cfcb64a8827c04eca4"
+const port = process.env.PORT || 3000;
+const API_KEY = process.env.API_KEY;
 
 const url = "https://api.openweathermap.org/data/2.5/weather";
 
